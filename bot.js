@@ -21,7 +21,7 @@ bot.on("guildCreate", async guild => {
     if (!channel) return;
     let embed = new Discord.RichEmbed()
       .setColor('#'+(Math.random()*0xFFFFFF<<0).toString(16))
-      .setTitle(`I am **${bot.user.username}**, and you better watch your mouth while im in **${guild.name}**`)
+      .setTitle(`I am **${bot.user.username}**, and you better watch your mouth while im in **${guild.name}**. Type !cmds for list of commands!`)
       .addField("Made by", "**(Lean)#1337**")
       .addField("Links", `[GitHub](https://github.com/TasosY2K/SwearBot)\n[Website](https://bot.ly/swear-bot)\n[Invite](${await bot.generateInvite(["ADMINISTRATOR"])})`)
     channel.send(embed);
@@ -159,7 +159,7 @@ bot.on("message", async messages => {
 					messages.reply('You must be a server admin to use this command!');
 				}
 			break;
-			case 'help':
+			case 'cmds':
 				messages.reply('Commands:\n!setCustomMsgs <true/false> -- Turn custom response messages OFF/ON\n!customMsgList -- See full list of insults\n!addCustomMsg <"Your Message"> -- Add custom response message\n!removeCustomMsg -- Remove most recently added insult from list\n!removeCustomMsg <message_index> -- Remove an insult from the list\n!allowUserCmd <true/false> -- Allow all users to use commands\n');
 			break;
          }
