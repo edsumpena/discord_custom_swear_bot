@@ -160,7 +160,7 @@ bot.on("message", async messages => {
 				}
 			break;
 			case 'cmds':
-				messages.reply('Commands:\n!setCustomMsgs <true/false> -- Turn custom response messages OFF/ON\n!customMsgList -- See full list of insults\n!addCustomMsg <"Your Message"> -- Add custom response message\n!removeCustomMsg -- Remove most recently added insult from list\n!removeCustomMsg <message_index> -- Remove an insult from the list\n!allowUserCmd <true/false> -- Allow all users to use commands\n');
+				messages.reply('Commands:\n!setCustomMsgs <true/false> -- Turn custom response messages ON/OFF\n!customMsgList -- See full list of insults\n!addCustomMsg <"Your Message"> -- Add custom response message\n!removeCustomMsg -- Remove most recently added insult from list\n!removeCustomMsg <message_index> -- Remove an insult from the list\n!allowUserCmd <true/false> -- Allow all users to use commands\n');
 			break;
          }
      }
